@@ -1,0 +1,139 @@
+apptoken -> bh6bj4h64jh6vj4h6vj4hv6j46bhb5j4
+endpoint -> backend.ums.fireswitch.com.ng
+NOTE: All endpoints must carry the apptoken
+
+1. Get system Data
+endpoint - /v1/systemData
+data
+	**none**
+response
+	json response (object)
+
+2. Login
+endpoint - /v1/login
+data (Object)
+	email - 'users email'
+	pword - 'users password'
+response
+	json response (object)
+
+
+3. Add Faculty
+endpoint - /v1/addFaculty
+data
+	usertoken - user's token
+	faculty - name of faculty being added
+response
+	json response (object)
+
+
+3. Add Department
+endpoint - /v1/addFaculty
+data
+	usertoken - user's token
+	facultyid - ID of faculty being added
+	dept - name of department
+response
+	json response (object)
+
+
+3. List Departments
+endpoint - /v1/listDepts
+data
+	usertoken - user's token
+	facultyid - ID of faculty
+	
+response
+	json response (array of objects)
+
+
+4. List Faculties
+endpoint - /v1/listFaculties
+data
+	usertoken - user's token
+	
+response
+	json response (array of objects)
+
+
+5. Add Level
+endpoint - /v1/addLevel
+data
+	usertoken - user's token
+	
+response
+	json response (object)
+
+
+6. List Levels
+endpoint - /v1/listLevels
+data
+	usertoken - user's token
+	
+response
+	json response (array of objects)
+
+
+7. Add New Student
+endpoint - /v1/newStudent
+data
+	usertoken - user's token
+	fname - full name
+	lname - last name
+	mname - middle name
+	mail - mail
+	phone - phone number
+	levelid - id of user's level
+	facultyid - user's faculty id
+	deptid - user's department id
+	
+response
+	json response (object)
+
+
+8. List All Students
+endpoint - /v1/listAllStudents
+data
+	usertoken - user's token
+	
+response
+	json response (array of objects)
+
+
+
+9. Add New Staff
+endpoint - /v1/newStaff
+data
+	usertoken - user's token
+	fname - full name
+	lname - last name
+	mname - middle name
+	mail - mail
+	phone - phone number
+	facultyid - user's faculty id
+	deptid - user's department id
+	
+response
+	json response (object)
+
+
+
+10. List All Staff
+endpoint - /v1/listAllStaff
+data
+	usertoken - user's token
+	
+response
+	json response (array of objects)
+
+
+
+11. Send Memo
+endpoint - /v1/sendMemo
+data (Object)
+	To - memo recipient (All, Students, Staff) (string)
+	Subject - memo subject (string)
+	Memo - message to be sent (string)
+	
+response
+	json response (objects)
